@@ -6,15 +6,15 @@ class PigLatinizer
    x = word.split(' ')
    answer = []
    x.each do |w|
-    if vowels.include?(w[0]) 
-    elsif consonants.include?(word[0]) && consonants.include?(word[1])
-    word[2..-1] + word[0..1] + 'ay'
-     elsif consonants.include?(word[0])
-     word[1..-1] + word[0] + 'ay'
-    else
-    word + 'way'
+    if vowels.include?(w[0])
+      new = w + "way"
+      answer << new 
+    else 
+      array = w.split /([aeiou].*)/
+      new = array[1] + array[0] + "ay"
+      answer << new 
     end
   end
-    x.join(' ')
+    answer.join(' ')
   end
 end
