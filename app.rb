@@ -8,7 +8,7 @@ class App < Sinatra::Base
   
   post '/piglatinize' do
     r = Piglatizizer.new
-    @result = r.pigparams[:user_phrase]
+    @result = r.piglatinize(params[:user_phrase])
     erb :results
   end
 end
