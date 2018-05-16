@@ -1,5 +1,5 @@
 class PigLatinizer 
-end
+
 
   def piglatinize(word)
    alpha = ('a'..'z').to_a
