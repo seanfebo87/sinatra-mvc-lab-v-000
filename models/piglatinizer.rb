@@ -2,13 +2,11 @@ class PigLatinizer
 
 
   def piglatinize(word)
-   alpha = ('a'..'z').to_a
-   vowels = %w(a e i o u)
-   consonants = alpha - vowels
+   vowels = %w(a e i o u A E I O U)
    x = word.split(' ')
-   x.map! do |word|
-    if consonants.include?(word[0]) && consonants.include?(word[1]) && consonants.include?(word[2])
-      word[3..-1] + word[0..2] + 'ay'
+   answer = []
+   x.each do |w|
+    if vowels.include?(w[0]) 
     elsif consonants.include?(word[0]) && consonants.include?(word[1])
     word[2..-1] + word[0..1] + 'ay'
      elsif consonants.include?(word[0])
