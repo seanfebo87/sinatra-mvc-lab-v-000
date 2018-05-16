@@ -16,6 +16,7 @@ class PigLatinizer
     else
     word + 'way'
     end
+  end
     x.join(' ')
   end
 end
