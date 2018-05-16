@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
   
   post '/piglatinize' do
+    r = p
     @result = params[:user_phrase]
     erb :results
   end
