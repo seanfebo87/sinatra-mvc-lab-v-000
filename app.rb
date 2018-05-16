@@ -7,7 +7,7 @@ class App < Sinatra::Base
   end
   
   post '/piglatinize' do
-    
+    @result = params[]
     erb :results
   end
 end
